@@ -1,4 +1,11 @@
-﻿#left-sidebar-nav {
+﻿.nav_subheader_horiz{
+     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+#left-sidebar-nav {
     position: fixed;
     width: 50px;
     left: 180px;

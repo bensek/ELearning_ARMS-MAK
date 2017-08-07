@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace EducationSite.Models
 {
@@ -19,6 +20,8 @@ namespace EducationSite.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        /* DBSET REPRESENTS THE TABLES IN THE DATABASE */
+        public DbSet<CourseUnit> CourseUnits { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
