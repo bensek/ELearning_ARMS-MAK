@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -21,7 +22,11 @@ namespace EducationSite.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
+        public DbSet<USER> USER { get; set; }
+
+
         public DbSet<Post> Posts { get; set; }
+
 
         /* DBSET REPRESENTS THE TABLES IN THE DATABASE */
         public DbSet<CourseUnit> CourseUnits { get; set; }
