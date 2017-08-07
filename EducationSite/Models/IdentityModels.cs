@@ -20,7 +20,12 @@ namespace EducationSite.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
         public DbSet<Post> Posts { get; set; }
+
+        /* DBSET REPRESENTS THE TABLES IN THE DATABASE */
+        public DbSet<CourseUnit> CourseUnits { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
