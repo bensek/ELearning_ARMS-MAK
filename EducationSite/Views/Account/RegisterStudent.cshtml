@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "RegisterStudent";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Log In</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Log In</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section">
+
+            <div class="container">
+                <div class="section">
+
+                    <div class="row">
+                        <div class="col s12 center">
+                            <h5>Student Registration</h5>
+                            <!-- beginning -->
+
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="full_name" type="text" class="validate">
+                                            <label for="full_name">Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="Username" type="text" class="validate">
+                                            <label for="Username">Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="Registration Number" type="text" class="validate">   <!-- clarrification -->
+                                            <label for="Registration Number">Registration Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" type="email" class="validate">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="password" type="password" class="validate">
+                                            <label for="password">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="password" type="password" class="validate">
+                                            <label for="password">Confirm Password</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                                        Submit
+
+                                    </button>
+
+                                </form>
+                            </div> <!-- this is where the major change ends -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="parallax-container valign-wrapper">
+                <div class="section no-pad-bot">
+                    <div class="container">
+                        <div class="row center">
+                            <h5 class="header col s12 #546e7a blue-grey darken-1">Enjoy your stay in a world that simplifies research and reading</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="parallax"><img src="background4.jpg." alt="Unsplashed background img 3"></div>
+            </div>
+
+            <footer class="page-footer teal">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <p class="grey-text text-lighten-4">Let this site be your medium in  the growth of knowledge and awareness</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <!--  Scripts-->
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="js/materialize.js"></script>
+            <script src="js/init.js"></script>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
