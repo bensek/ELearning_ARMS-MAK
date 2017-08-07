@@ -1,0 +1,179 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- CSS --> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/Content/materialize-v0.97.5/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="~/Content/materialize-v0.97.5/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="~/Content/materialize-v0.97.5/css/dashboard.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <style type="text/css">        
+            
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <!-- Navbar goes here -->
+            <nav class="white wrapper" role="navigation">
+                <div class="nav-wrapper container">
+                    <a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#modalPost" class="waves-effect waves-light btn teal darken-4"><i class="material-icons right">edit</i>Post</a> </li>
+
+                        <li><a href="sass.html">Home</a></li>
+                        <li><a href="collapsible.html">Profile</a></li>
+                        <li><a href="index.html">Sign Out</a></li>
+                        <!-- <li><div class="user-view">
+                            <a href="#!user"><img class="circle" src="demo.png"></a>
+                            <a href="#!name"><span class="white-text name">John Doe</span></a>
+                            </div></li> -->
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <div id="sideNav">
+        <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="left: 0px; height: 614px;">
+            <li><a class="subheader">All Course Units</a></li>            
+            <li><a href="#!">Software Engineering</a></li>
+            <li><a href="#!">Digital Electronics</a></li>
+            <li><a href="#!">Electromagnetic Fields</a></li>
+            <li><a href="#!">Communication Skills</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Coursemates</a></li>
+            <li><a href="#!">Angela Nayiga</a></li>
+            <li><a href="#!">Rodrick Wamala</a></li>
+            <li><a href="#!">Maximo Mugisha</a></li>
+            <li><a href="#!">Pamela Wendy</a></li>
+            <li><a href="#!">Abraham Kakooza</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="primary">
+            <main id="main">
+                <div class="row">
+                    <div class="col s12 m7 l8">
+                        <!-- <div class="white">
+                            <div class="main-header">
+                              <div class="row">
+                                <div class="col s12 m9">
+
+                                </div>
+                                <div class="col s12 m3">
+                                    <p>Mon, 19th July<br>5:00PM</p>
+                                </div>
+
+                              </div>
+                            </div>
+                         </div> -->
+
+                        <article class="card">
+                            <div class="card horizontal">
+                                <div class="col s2">
+                                    <img id="author_img" src="~/Content/Images/demo.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <h6><strong>Subject</strong></h6>
+                                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                                    </div>
+                                    <div id="author_img" class="card-action">
+                                        <span class="author">
+                                            <i class="material-icons">person</i>
+                                            <a class="author_link" href="#!">Author</a>
+                                        </span>
+                                        <span class="access_time">
+                                            <i class="material-icons">access_time</i>
+                                            <a href="#!">22:17, Mon</a>
+                                        </span>
+                                        <span class="read_more">
+                                            <i class="material-icons">launch</i>
+                                            <a href="#!">Read More</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card horizontal">
+                                <div class="col s2">
+                                    <img id="author_img" src="~/Content/Images/demo.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <h6><strong>Subject</strong></h6>
+                                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                                    </div>
+                                    <div id="author_img" class="card-action">
+                                        <span class="author">
+                                            <i class="material-icons">person</i>
+                                            <a class="author_link" href="#!">Author</a>
+                                        </span>
+                                        <span class="access_time">
+                                            <i class="material-icons">access_time</i>
+                                            <a href="#!">22:17, Mon</a>
+                                        </span>
+                                        <span class="read_more">
+                                            <i class="material-icons">launch</i>
+                                            <a href="#!">Read More</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                    <div class="col s12 m5 l4">
+                        <div class="card red darken-4">
+                            <div class="card-content white-text">
+                                <span class="card-title home-cards">Tests and Deadlines</span>
+                                <p>
+                                    I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.
+                                </p>
+                                <a href="">View All</a>
+                            </div>
+                        </div>
+                        <div class="card teal darken-4">
+                            <div class="card-content white-text">
+                                <span class="card-title home-cards">Latest Materials</span>
+                                <p>
+                                    I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.
+                                </p>
+                                <a href="">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <!--Materializecss Slider-->
+    <script>
+        $(document).ready(function () {
+            $('#modalPost').modal();
+        });
+    </script>
+
+</body>
+
+
+
+</html>
+
