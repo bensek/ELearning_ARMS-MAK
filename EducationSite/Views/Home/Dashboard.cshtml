@@ -1,9 +1,5 @@
-﻿
-@{
-    ViewBag.Title = "Dashboard";
-}
+﻿@model EducationSite.ViewModel.DashboardModel
 
-<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -12,10 +8,6 @@
     <link href="~/Content/materialize-v0.97.5/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="~/Content/materialize-v0.97.5/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="~/Content/materialize-v0.97.5/css/dashboard.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
-    <style type="text/css">        
-            
-    </style>
 </head>
 <body>
     <header>
@@ -42,8 +34,12 @@
     </header>
 
     <div id="sideNav">
-        <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="left: 0px; height: 614px;">
-            <li><a class="subheader">All Course Units</a></li>            
+          <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="left: 0px; height: 614px;">
+            
+            <li><a class="subheader">All Course Units</a></li>
+            @foreach(var courseunit in Model.CourseUnits){
+                <li><a>@courseunit.Name </a></li>
+            }                      
             <li><a href="#!">Software Engineering</a></li>
             <li><a href="#!">Digital Electronics</a></li>
             <li><a href="#!">Electromagnetic Fields</a></li>
@@ -75,6 +71,9 @@
                               </div>
                             </div>
                          </div> -->
+
+
+
 
                         <article class="card">
                             <div class="card horizontal">
