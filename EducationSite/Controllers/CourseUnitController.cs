@@ -16,7 +16,15 @@ namespace EducationSite.Controllers
             _dbContext = new ApplicationDbContext();
         }
         // GET: CourseUnit
-        public ActionResult Index()
+        /*public ActionResult CourseUnit(int id)
+        {
+            var courseunit = _dbContext.CourseUnits.SingleOrDefault(c => c.Id == id);
+            Console.WriteLine("course unit exists");
+            if (courseunit == null)
+                return HttpNotFound();
+            return View(courseunit);
+        }*/
+        public ActionResult CourseUnit()
         {
             return View();
         }

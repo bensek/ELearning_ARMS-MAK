@@ -36,9 +36,10 @@
     <div id="sideNav">
           <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="left: 0px; height: 614px;">
             
-            <li><a class="subheader">All Course Units</a></li>
+            <li><a href= ".AddCU" class="subheader">All Course Units<i class="material-icons right-align">more_vert</i></a></li>
             @foreach(var courseunit in Model.CourseUnits){
-                <li><a>@courseunit.Name </a></li>
+                <!--<li><a href="CourseUnit/cudetails/">@courseunit.Name </a></li>-->
+                <li>@Html.ActionLink(@courseunit.Name, "CourseUnit/ViewCourseUnit", new {id=courseunit.Id})</li>
             }                      
             <li><a href="#!">Software Engineering</a></li>
             <li><a href="#!">Digital Electronics</a></li>
