@@ -166,11 +166,25 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
 
+
     <Compile Include="Migrations\201708071901581_AddPostsTable.cs" />
     <Compile Include="Migrations\201708071901581_AddPostsTable.Designer.cs">
       <DependentUpon>201708071901581_AddPostsTable.cs</DependentUpon>
 
+    <Compile Include="Migrations\201708071309053_AddUsersTable.cs" />
+    <Compile Include="Migrations\201708071309053_AddUsersTable.Designer.cs">
+      <DependentUpon>201708071309053_AddUsersTable.cs</DependentUpon>
+
     <Compile Include="Migrations\201708071215517_AddCourseUnitsTable.cs" />
+
+
+    <Compile Include="Migrations\201708071901581_AddPostsTable.cs" />
+    <Compile Include="Migrations\201708071901581_AddPostsTable.Designer.cs">
+      <DependentUpon>201708071901581_AddPostsTable.cs</DependentUpon>
+
+      
+      <Compile Include="Migrations\201708071215517_AddCourseUnitsTable.cs" />
+
     <Compile Include="Migrations\201708071215517_AddCourseUnitsTable.Designer.cs">
       <DependentUpon>201708071215517_AddCourseUnitsTable.cs</DependentUpon>
 
@@ -179,6 +193,12 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseUnit.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+
+
+    <Compile Include="Models\Post.cs" />
+
+    <Compile Include="Models\USER.cs" />
+
 
     <Compile Include="Models\Post.cs" />
 
@@ -270,9 +290,20 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
 
+
     <Content Include="Views\Posts\NewPost.cshtml" />
 
     <Content Include="Views\CourseUnit\CourseUnit.cshtml" />
+
+
+    <Content Include="Views\CourseUnit\CourseUnit.cshtml" />
+
+
+    <Content Include="Views\Account\Log_In.cshtml" />
+    <Content Include="Views\Account\RegisterStudent.cshtml" />
+ <Content Include="Views\Posts\NewPost.cshtml" />
+
+
 
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +321,14 @@
 
     <EmbeddedResource Include="Migrations\201708071901581_AddPostsTable.resx">
       <DependentUpon>201708071901581_AddPostsTable.cs</DependentUpon>
+
+    <EmbeddedResource Include="Migrations\201708071309053_AddUsersTable.resx">
+      <DependentUpon>201708071309053_AddUsersTable.cs</DependentUpon>
+
+
+    <EmbeddedResource Include="Migrations\201708071901581_AddPostsTable.resx">
+      <DependentUpon>201708071901581_AddPostsTable.cs</DependentUpon>
+
 
     <EmbeddedResource Include="Migrations\201708071215517_AddCourseUnitsTable.resx">
       <DependentUpon>201708071215517_AddCourseUnitsTable.cs</DependentUpon>
