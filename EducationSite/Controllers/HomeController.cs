@@ -33,6 +33,11 @@ namespace EducationSite.Controllers
 
             return View();
         }
+        public ActionResult LoadCourseUnit(int id)
+        {
+
+            return RedirectToAction("CourseUnit", "CourseUnit", new { id=id});
+        }
         public ActionResult Dashboard()
         {
             var courseunits = _dbContext.CourseUnits.ToList();
