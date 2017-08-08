@@ -19,6 +19,12 @@ namespace EducationSite.Controllers
     {
         private ApplicationUserManager _userManager;
 
+        private ApplicationDbContext _dbContext;
+
+        public AccountController()
+        {
+            _dbContext = new ApplicationDbContext();
+        }
         public AccountController()
         {
         }
@@ -38,6 +44,22 @@ namespace EducationSite.Controllers
                 _userManager = value;
             }
         }
+
+        public ActionResult Log_In(USER userObj)
+        {
+            var user = _dbContext.USER.SingleOrDefault(v => v.Email == userObj.Email);
+
+            if (user == null)
+                return HttpNotFound(); //INCOTRRR
+
+            return RedirectToAction("Home/Dashboard");
+        }
+
+
+
+
+
+
         //
         //GET: /Account/Log_In
         [AllowAnonymous]
