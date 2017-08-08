@@ -28,6 +28,16 @@ namespace EducationSite.Controllers
             UserManager = userManager;
         }
 
+
+     
+
+
+
+
+
+
+
+
         public ApplicationUserManager UserManager {
             get
             {

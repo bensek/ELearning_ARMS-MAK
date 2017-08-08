@@ -1,0 +1,41 @@
+﻿@model EducationSite.Models.User
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+@using (Html.BeginForm("SignMeUp", "Auth", FormMethod.Post, new { @class = "form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Fullname)
+        @Html.TextBoxFor(m => m.Fullname, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.RegNo)
+        @Html.TextBoxFor(m => m.RegNo, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control" })
+    </div>
+    <input type="submit" class="btn" value="REGISTER" />
+
+
+
+
+}
+
+
