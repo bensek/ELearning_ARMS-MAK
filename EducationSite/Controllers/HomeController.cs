@@ -70,7 +70,7 @@ namespace EducationSite.Controllers
         {
             List<CourseUnit> cuModel = new List<CourseUnit>();
             cuModel.Add(new CourseUnit()
-            {Id=1, Name="Electronics II", Code="CMP101", CreditUnit=4, Description="An Introduction to Electronics", Instructor="Ms Shiela", ProgrammeId=1, SemesterOffered=2, YearOffered=2
+            {Id=1, Name="Engineering Mathematics II", Code="CMP101", CreditUnit=4, Description="An Introduction to Electronics", Instructor="Ms Shiela", ProgrammeId=1, SemesterOffered=2, YearOffered=2
             });
             cuModel.Add(new CourseUnit()
             {
