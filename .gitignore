@@ -9,6 +9,8 @@
 # SQL Server files
 *.mdf
 *.ldf
+ 
+App_Data
 
 # Build results
 
