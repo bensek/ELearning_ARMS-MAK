@@ -159,12 +159,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+
+    <Compile Include="Controllers\AuthController.cs" />
+
     <Compile Include="Controllers\CourseUnitController.cs" />
+
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+
+    <Compile Include="Migrations\201708081614029_AddUserTable.cs" />
+    <Compile Include="Migrations\201708081614029_AddUserTable.Designer.cs">
+      <DependentUpon>201708081614029_AddUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708091253368_AddUserVerificationTable.cs" />
+    <Compile Include="Migrations\201708091253368_AddUserVerificationTable.Designer.cs">
+      <DependentUpon>201708091253368_AddUserVerificationTable.cs</DependentUpon>
+
 
 
     <Compile Include="Migrations\201708071901581_AddPostsTable.cs" />
@@ -194,6 +207,9 @@
     <Compile Include="Models\CourseUnit.cs" />
     <Compile Include="Models\Deadline.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserActivation.cs" />
+
 
 
     <Compile Include="Models\Post.cs" />
@@ -290,6 +306,9 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Auth\SignIn.cshtml" />
+    <Content Include="Views\Auth\SignUp.cshtml" />
+    <Content Include="Views\Auth\Lecturer_LogIn.cshtml" />
 
 
     <Content Include="Views\Posts\NewPost.cshtml" />
@@ -319,6 +338,12 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708081614029_AddUserTable.resx">
+      <DependentUpon>201708081614029_AddUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091253368_AddUserVerificationTable.resx">
+      <DependentUpon>201708091253368_AddUserVerificationTable.cs</DependentUpon>
+
 
     <EmbeddedResource Include="Migrations\201708071901581_AddPostsTable.resx">
       <DependentUpon>201708071901581_AddPostsTable.cs</DependentUpon>

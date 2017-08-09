@@ -21,6 +21,8 @@ namespace EducationSite.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<User> Users { get; set; }
+
 
 
         public DbSet<Post> Posts { get; set; }

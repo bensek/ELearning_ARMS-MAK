@@ -20,6 +20,19 @@ namespace EducationSite.Controllers
             return View();
         }
 
+
+        /*Taked us to the Account Controller to GET:: SignIn*/
+        public ActionResult SignIn()
+        {
+            return RedirectToAction("SignIn","Auth");
+        }
+
+        /*Taked us to the Account Controller to GET:: SignUp*/
+        public ActionResult SignUp()
+        {
+            return RedirectToAction("SignUp", "Auth");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -1,0 +1,44 @@
+﻿@model EducationSite.Models.User
+
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<style>
+    #logincard{
+        margin-left:250px;
+        margin-right:250px;
+        margin-top:150px;
+    }
+</style>
+
+<div class="container">
+    <div class="card" id="logincard">
+        <div class="card-content black-text">
+            <span class="card-title">WELCOME BACK</span>
+            <h5>Log In</h5>
+            @using (Html.BeginForm("SignMeIn", "Auth", FormMethod.Post, new { @class = "form" }))
+            {
+
+                <div class="input-field">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @class = "input-field" })
+                </div>
+
+                <div class="input-field">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password)
+                    <!--put id="password" type="password" class="validate"-->
+                </div>
+                <input type="submit" class="btn" value="Log In" />
+            }
+
+        </div>
+
+    </div>
+
+</div>
+
+   
+
+    
