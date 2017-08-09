@@ -11,6 +11,7 @@
 *.ldf
  
 *.csproj
+Education/App_Data
 
 # Build results
 
