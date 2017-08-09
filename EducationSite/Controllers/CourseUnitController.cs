@@ -25,6 +25,11 @@ namespace EducationSite.Controllers
             return View(courseunit);
         }*/
         public ActionResult CourseUnit(int CuId)
+
+
+
+        public ActionResult CourseUnit()
+
         {
             var courseunit = _dbContext.CourseUnits.SingleOrDefault(c => c.Id == CuId);
             return View(courseunit);
