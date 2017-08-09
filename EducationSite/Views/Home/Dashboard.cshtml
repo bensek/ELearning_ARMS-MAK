@@ -17,7 +17,7 @@
                 <div class="nav-wrapper container">
                     <a id="logo-container" href="index.html" class="brand-logo">Logo</a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="#modalPost" class="waves-effect waves-light btn teal darken-4"><i class="material-icons right">edit</i>Post</a> </li>
+                        <li><a href="/Posts/NewPost" class="waves-effect waves-light btn teal darken-4"><i class="material-icons right">edit</i>Post</a> </li>
 
                         <li><a href="sass.html">Home</a></li>
                         <li><a href="collapsible.html">Profile</a></li>
@@ -39,7 +39,7 @@
             <li><a href= ".AddCU" class="subheader">All Course Units<i class="material-icons right-align">more_vert</i></a></li>
             @foreach(var courseunit in Model.CourseUnits){
                 <!--<li><a href="CourseUnit/cudetails/">@courseunit.Name </a></li>-->
-                <li>@Html.ActionLink(@courseunit.Name, "CourseUnit/ViewCourseUnit", new {id=courseunit.Id})</li>
+                <li>@Html.ActionLink(@courseunit.Name, "LoadCourseUnit", new {id=courseunit.Id})</li>
             }                      
             <li><a href="#!">Software Engineering</a></li>
             <li><a href="#!">Digital Electronics</a></li>
