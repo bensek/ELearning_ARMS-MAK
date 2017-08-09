@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EducationSite.Models;
+using EducationSite.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,11 @@ namespace EducationSite.Controllers
 {
     public class HomeController : Controller
     {
+        ApplicationDbContext _dbContext;
+        public HomeController()
+        {
+            _dbContext = new ApplicationDbContext();
+        }
         public ActionResult Index()
         {
             return View();
@@ -28,7 +35,17 @@ namespace EducationSite.Controllers
         }
         public ActionResult Dashboard()
         {
-            return View();
+            DashboardModel mymodel = new DashboardModel();
+            mymodel.Posts = GetPosts();
+            return View(mymodel);
         }
+        public List<Post> GetPosts()
+        {
+            //List<Post> postModel = new List<Post>;
+             var posts = _dbContext.Posts.ToList();
+            return posts;
+       
+        }
+
     }
 }

@@ -20,6 +20,13 @@ namespace EducationSite.Controllers
            // var Posts = _dbContext.Posts.ToList();
             return View();
         }
+        public ActionResult Add(Post post)
+        {
+            _dbContext.Posts.Add(post);
+            _dbContext.SaveChanges();
+
+            return RedirectToAction("Dashboard","Home");
+        }
            
         
     }

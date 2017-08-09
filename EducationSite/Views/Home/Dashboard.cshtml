@@ -1,7 +1,5 @@
-﻿
-@{
-    ViewBag.Title = "Dashboard";
-}
+﻿@Model EducationSite.ViewModel.DashboardModel
+
 
 <!DOCTYPE html>
 <html>
@@ -77,35 +75,43 @@
                          </div> -->
 
 
+                    <!--lopping the posts method-->
 
 
-                        <article class="card">
-                            <div class="card horizontal">
-                                <div class="col s2">
-                                    <img id="author_img" src="~/Content/Images/demo.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <h6><strong>Subject</strong></h6>
-                                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        @foreach (var post in Model.Posts)
+                        {
+                            <article class="card">
+                                <div class="card horizontal">
+                                    <div class="col s2">
+                                        <img id="author_img" src="~/Content/Images/demo.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                     </div>
-                                    <div id="author_img" class="card-action">
-                                        <span class="author">
-                                            <i class="material-icons">person</i>
-                                            <a class="author_link" href="#!">Author</a>
-                                        </span>
-                                        <span class="access_time">
-                                            <i class="material-icons">access_time</i>
-                                            <a href="#!">22:17, Mon</a>
-                                        </span>
-                                        <span class="read_more">
-                                            <i class="material-icons">launch</i>
-                                            <a href="#!">Read More</a>
-                                        </span>
+                                    <div class="card-stacked">
+                                        <div class="card-content">
+                                            <h6><strong>@post.Subject</strong></h6>
+                                            <p>@post.Body</p>
+                                        </div>
+                                        <div id="author_img" class="card-action">
+                                            <span class="author">
+                                                <i class="material-icons">person</i>
+                                                <a class="author_link" href="#!">Author</a>
+                                            </span>
+                                            <span class="access_time">
+                                                <i class="material-icons">access_time</i>
+                                                <a href="#!">22:17, Mon</a>
+                                            </span>
+                                            <span class="read_more">
+                                                <i class="material-icons">comment</i>
+                                                <a href="#!">Comments</a>
+                                            </span>
+                                            <span class="read_more">
+                                                <i class="material-icons">launch</i>
+                                                <a href="#!">Read More</a>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        }
                         <article class="card">
                             <div class="card horizontal">
                                 <div class="col s2">
