@@ -24,9 +24,10 @@ namespace EducationSite.Controllers
                 return HttpNotFound();
             return View(courseunit);
         }*/
-        public ActionResult CourseUnit()
+        public ActionResult CourseUnit(int CuId)
         {
-            return View();
+            var courseunit = _dbContext.CourseUnits.SingleOrDefault(c => c.Id == CuId);
+            return View(courseunit);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace EducationSite.Models
     {
         /* DBSET REPRESENTS THE TABLES IN THE DATABASE */
         public DbSet<CourseUnit> CourseUnits { get; set; }
+        public DbSet<Deadline> Deadlines { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
