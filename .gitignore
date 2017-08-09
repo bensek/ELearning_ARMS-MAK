@@ -6,6 +6,12 @@
 *.user
 *.sln.docstates
 
+# SQL Server files
+*.mdf
+*.ldf
+ 
+EducationSite/App_Data
+
 # Build results
 
 [Dd]ebug/
