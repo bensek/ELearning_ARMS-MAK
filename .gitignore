@@ -10,7 +10,7 @@
 *.mdf
 *.ldf
  
-App_Data
+EducationSite/App_Data
 
 # Build results
 
