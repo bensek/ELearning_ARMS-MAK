@@ -265,6 +265,8 @@ TestResults/
 # OS generated files #
 
 ######################
+EducationSite/App_Data
+
 
 .DS_Store?
 

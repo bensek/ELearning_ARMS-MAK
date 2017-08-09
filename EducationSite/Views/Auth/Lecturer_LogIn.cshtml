@@ -1,21 +1,19 @@
-﻿@model EducationSite.Models.User
-
+﻿
 @{
-    ViewBag.Title = "SignIn";
+    ViewBag.Title = "Lecturer_LogIn";
 }
-
 <style>
-    #logincard{
-        margin-left:250px;
-        margin-right:250px;
-        margin-top:150px;
+    #logincard {
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-top: 150px;
     }
 </style>
 
 <div class="container">
     <div class="card" id="logincard">
         <div class="card-content black-text">
-            <span class="card-title">WELCOME BACK</span>
+            <span class="card-title">WELCOME BACK Sir/Madam</span>
             <h5>Log In</h5>
             @using (Html.BeginForm("SignMeIn", "Auth", FormMethod.Post, new { @class = "form" }))
             {
@@ -39,6 +37,6 @@
 
 </div>
 
-   
 
-    
+
+
