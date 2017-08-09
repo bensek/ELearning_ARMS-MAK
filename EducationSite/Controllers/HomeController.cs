@@ -21,6 +21,19 @@ namespace EducationSite.Controllers
             return View();
         }
 
+
+        /*Taked us to the Account Controller to GET:: SignIn*/
+        public ActionResult SignIn()
+        {
+            return RedirectToAction("SignIn","Auth");
+        }
+
+        /*Taked us to the Account Controller to GET:: SignUp*/
+        public ActionResult SignUp()
+        {
+            return RedirectToAction("SignUp", "Auth");
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -33,6 +46,11 @@ namespace EducationSite.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult LoadCourseUnit(int id)
+        {
+
+            return RedirectToAction("CourseUnit", "CourseUnit", new { id=id});
         }
         public ActionResult Dashboard()
         {
@@ -48,5 +66,54 @@ namespace EducationSite.Controllers
        
         }
 
+
+            var courseunits = _dbContext.CourseUnits.ToList();
+            DashboardModel mymodel = new DashboardModel();
+            mymodel.Programme = GetProgramme();
+            mymodel.CourseUnits = GetCourseUnits();
+            return View(mymodel);
+        }
+
+       /* private List<CourseUnit> GetCourseUnits()
+        {
+            List<CourseUnit> cuModel = new List<CourseUnit>();
+            cuModel.Add(new CourseUnit() { BlogID = 1, CommentID = 1, Comment = "Good One", CommentedBy = "Vijay" });
+            
+            return cuModel;
+        }*/
+
+        public Programme GetProgramme()
+        {
+            Programme pModel = new Programme()
+            {
+                Id = 1,
+                Name = "Bsc Electrical Engineering",
+                Code = "BELE"
+            };
+            return pModel;
+        }
+
+        public List<CourseUnit> GetCourseUnits()
+        {
+            List<CourseUnit> cuModel = new List<CourseUnit>();
+            cuModel.Add(new CourseUnit()
+            {Id=1, Name="Engineering Mathematics II", Code="CMP101", CreditUnit=4, Description="An Introduction to Electronics", Instructor="Ms Shiela", ProgrammeId=1, SemesterOffered=2, YearOffered=2
+            });
+            cuModel.Add(new CourseUnit()
+            {
+                Id = 1,
+                Name = "Programming Fundamentals",
+                Code = "CMP103",
+                CreditUnit = 4,
+                Description = "Functional Programming with C language",
+                Instructor = "Mr Ephraim",
+                ProgrammeId = 1,
+                SemesterOffered = 2,
+                YearOffered = 2
+            });
+            return cuModel;
+        }
+
+       
     }
 }

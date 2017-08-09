@@ -6,6 +6,12 @@
 *.user
 *.sln.docstates
 
+# SQL Server files
+*.mdf
+*.ldf
+ 
+EducationSite/App_Data
+
 # Build results
 
 [Dd]ebug/
@@ -265,6 +271,8 @@ TestResults/
 # OS generated files #
 
 ######################
+EducationSite/App_Data
+
 
 .DS_Store?
 
