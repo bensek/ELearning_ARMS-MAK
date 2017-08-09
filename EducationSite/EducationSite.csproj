@@ -188,10 +188,13 @@
     <Compile Include="Migrations\201708071215517_AddCourseUnitsTable.Designer.cs">
       <DependentUpon>201708071215517_AddCourseUnitsTable.cs</DependentUpon>
 
+<<<<<<< HEAD
     </Compile>
     <Compile Include="Migrations\201708091244559_AddDeadlinesTable.cs" />
     <Compile Include="Migrations\201708091244559_AddDeadlinesTable.Designer.cs">
       <DependentUpon>201708091244559_AddDeadlinesTable.cs</DependentUpon>
+=======
+>>>>>>> refs/remotes/origin/develop
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -298,12 +301,21 @@
 
     <Content Include="Views\Posts\NewPost.cshtml" />
 
+<<<<<<< HEAD
     <Content Include="Views\CourseUnit\CourseUnit.cshtml" />
 
 
     <Content Include="Views\CourseUnit\CourseUnit.cshtml" />
 
 
+=======
+    <Content Include="Views\CourseUnit\CourseUnit.cshtml" />
+
+
+    <Content Include="Views\CourseUnit\CourseUnit.cshtml" />
+
+
+>>>>>>> refs/remotes/origin/develop
     <Content Include="Views\Account\Log_In.cshtml" />
     <Content Include="Views\Account\RegisterStudent.cshtml" />
  <Content Include="Views\Posts\NewPost.cshtml" />
@@ -338,9 +350,12 @@
     <EmbeddedResource Include="Migrations\201708071215517_AddCourseUnitsTable.resx">
       <DependentUpon>201708071215517_AddCourseUnitsTable.cs</DependentUpon>
 
+<<<<<<< HEAD
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708091244559_AddDeadlinesTable.resx">
       <DependentUpon>201708091244559_AddDeadlinesTable.cs</DependentUpon>
+=======
+>>>>>>> refs/remotes/origin/develop
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
