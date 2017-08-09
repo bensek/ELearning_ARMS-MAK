@@ -28,6 +28,16 @@ namespace EducationSite.Controllers
             UserManager = userManager;
         }
 
+
+     
+
+
+
+
+
+
+
+
         public ApplicationUserManager UserManager {
             get
             {
@@ -38,7 +48,46 @@ namespace EducationSite.Controllers
                 _userManager = value;
             }
         }
+        //
+        //GET: /Account/Log_In
+        [AllowAnonymous]
+        public ActionResult Log_In(string returnUrl) 
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
+        //
+        //POST
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Log_In(USER model, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await UserManager.FindAsync(model.Email, model.password);
+                if (user != null)
+                {
+                    //await SignInAsync(user, model.RememberMe);
+                    return RedirectToLocal(returnUrl);
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid username or password.");
+                }
+            }
 
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+        //
+        //GET: /Account/RegisterStudent
+        [AllowAnonymous]
+        public ActionResult RegisterStudent(string returnUrl) 
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
         //
         // GET: /Account/Login
         [AllowAnonymous]

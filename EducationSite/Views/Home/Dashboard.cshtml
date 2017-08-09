@@ -1,9 +1,8 @@
-﻿
-@{
-    ViewBag.Title = "Dashboard";
-}
+﻿@Model EducationSite.ViewModel.DashboardModel
 
-<!DOCTYPE html>
+
+﻿@model EducationSite.ViewModel.DashboardModel
+
 <html>
 <head>
     <title></title>
@@ -12,10 +11,6 @@
     <link href="~/Content/materialize-v0.97.5/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="~/Content/materialize-v0.97.5/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="~/Content/materialize-v0.97.5/css/dashboard.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
-    <style type="text/css">        
-            
-    </style>
 </head>
 <body>
     <header>
@@ -25,7 +20,7 @@
                 <div class="nav-wrapper container">
                     <a id="logo-container" href="index.html" class="brand-logo">Logo</a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="#modalPost" class="waves-effect waves-light btn teal darken-4"><i class="material-icons right">edit</i>Post</a> </li>
+                        <li><a href="/Posts/NewPost" class="waves-effect waves-light btn teal darken-4"><i class="material-icons right">edit</i>Post</a> </li>
 
                         <li><a href="sass.html">Home</a></li>
                         <li><a href="collapsible.html">Profile</a></li>
@@ -42,8 +37,13 @@
     </header>
 
     <div id="sideNav">
-        <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="left: 0px; height: 614px;">
-            <li><a class="subheader">All Course Units</a></li>            
+          <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="left: 0px; height: 614px;">
+            
+            <li><a href= ".AddCU" class="subheader">All Course Units<i class="material-icons right-align">more_vert</i></a></li>
+            @foreach(var courseunit in Model.CourseUnits){
+                <!--<li><a href="CourseUnit/cudetails/">@courseunit.Name </a></li>-->
+                <li>@Html.ActionLink(@courseunit.Name, "LoadCourseUnit", new {id=courseunit.Id})</li>
+            }                      
             <li><a href="#!">Software Engineering</a></li>
             <li><a href="#!">Digital Electronics</a></li>
             <li><a href="#!">Electromagnetic Fields</a></li>
@@ -76,33 +76,44 @@
                             </div>
                          </div> -->
 
-                        <article class="card">
-                            <div class="card horizontal">
-                                <div class="col s2">
-                                    <img id="author_img" src="~/Content/Images/demo.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <h6><strong>Subject</strong></h6>
-                                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+
+                    <!--lopping the posts method-->
+
+
+                        @foreach (var post in Model.Posts)
+                        {
+                            <article class="card">
+                                <div class="card horizontal">
+                                    <div class="col s2">
+                                        <img id="author_img" src="~/Content/Images/demo.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                     </div>
-                                    <div id="author_img" class="card-action">
-                                        <span class="author">
-                                            <i class="material-icons">person</i>
-                                            <a class="author_link" href="#!">Author</a>
-                                        </span>
-                                        <span class="access_time">
-                                            <i class="material-icons">access_time</i>
-                                            <a href="#!">22:17, Mon</a>
-                                        </span>
-                                        <span class="read_more">
-                                            <i class="material-icons">launch</i>
-                                            <a href="#!">Read More</a>
-                                        </span>
+                                    <div class="card-stacked">
+                                        <div class="card-content">
+                                            <h6><strong>@post.Subject</strong></h6>
+                                            <p>@post.Body</p>
+                                        </div>
+                                        <div id="author_img" class="card-action">
+                                            <span class="author">
+                                                <i class="material-icons">person</i>
+                                                <a class="author_link" href="#!">Author</a>
+                                            </span>
+                                            <span class="access_time">
+                                                <i class="material-icons">access_time</i>
+                                                <a href="#!">22:17, Mon</a>
+                                            </span>
+                                            <span class="read_more">
+                                                <i class="material-icons">comment</i>
+                                                <a href="#!">Comments</a>
+                                            </span>
+                                            <span class="read_more">
+                                                <i class="material-icons">launch</i>
+                                                <a href="#!">Read More</a>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        }
                         <article class="card">
                             <div class="card horizontal">
                                 <div class="col s2">
