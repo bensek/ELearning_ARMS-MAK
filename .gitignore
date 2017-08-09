@@ -6,8 +6,11 @@
 *.user
 *.sln.docstates
 
-.EducationSite/App_Data/aspnet-EducationSite-20170805060540.mdf
-.EducationSite/App_Data/aspnet-EducationSite-20170805060540_log.ldf
+# SQL Server files
+*.mdf
+*.ldf
+ 
+*.csproj
 
 # Build results
 
