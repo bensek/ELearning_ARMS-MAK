@@ -28,7 +28,7 @@ namespace EducationSite.Models
         public DbSet<USER> USER { get; set; }
 
 
-        public DbSet<Post> Posts { get; set; }
+        //public DbSet<Post> Posts { get; set; }
 
         /* DBSET REPRESENTS THE TABLES IN THE DATABASE */
         public DbSet<CourseUnit> CourseUnits { get; set; }

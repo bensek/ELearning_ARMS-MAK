@@ -24,11 +24,11 @@ namespace EducationSite.Controllers
                 return HttpNotFound();
             return View(courseunit);
         }*/
+       // public ActionResult CourseUnit(int CuId)
+
+
+
         public ActionResult CourseUnit(int CuId)
-
-
-
-        public ActionResult CourseUnit()
 
         {
             var courseunit = _dbContext.CourseUnits.SingleOrDefault(c => c.Id == CuId);
